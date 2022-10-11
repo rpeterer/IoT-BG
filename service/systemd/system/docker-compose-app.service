@@ -1,0 +1,17 @@
+# /etc/systemd/system/docker-compose-app.service
+
+[Unit]
+Description=Docker Compose Application Service 
+After=docker.service
+Wants=docker.service
+Requires=docker.service
+
+[Service]
+Type=simple
+WorkingDirectory=/home/ubuntu/IoT-BG
+ExecStart=/usr/bin/docker compose up
+ExecStop=/usr/bin/docker commpose down
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
