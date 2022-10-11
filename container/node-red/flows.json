@@ -60,25 +60,38 @@
         "props": [
             {
                 "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
             }
         ],
         "repeat": "",
         "crontab": "",
         "once": false,
         "onceDelay": 0.1,
-        "topic": "Hallo Welt",
-        "payload": "",
-        "payloadType": "date",
-        "x": 300,
+        "topic": "",
+        "payload": "Hallo Welt",
+        "payloadType": "str",
+        "x": 260,
         "y": 220,
         "wires": [
             [
-                "32936df7bfb4b6a2"
+                "32936df7bfb4b6a2",
+                "4aed3ca683407442"
             ]
         ]
+    },
+    {
+        "id": "4aed3ca683407442",
+        "type": "debug",
+        "z": "f59ffeb2427b290b",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 810,
+        "y": 300,
+        "wires": []
     }
 ]
