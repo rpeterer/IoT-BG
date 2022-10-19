@@ -8,6 +8,14 @@
         "env": []
     },
     {
+        "id": "cb66150894bad642",
+        "type": "tab",
+        "label": "Flow 2",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
         "id": "f8a1c2ebdf91ab0b",
         "type": "mqtt-broker",
         "name": "",
@@ -51,7 +59,8 @@
                 "default": "#0094CE",
                 "baseColor": "#0094CE",
                 "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
-                "edited": false
+                "edited": true,
+                "reset": false
             },
             "darkTheme": {
                 "default": "#097479",
@@ -141,7 +150,7 @@
     {
         "id": "fa7bf54eaa14cc14",
         "type": "ui_group",
-        "name": "Standard",
+        "name": "",
         "tab": "20bb51986471a141",
         "order": 1,
         "disp": true,
@@ -175,6 +184,35 @@
         "name": "Forms Example ",
         "icon": "home",
         "order": 2,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "755fc76e1639abf3",
+        "type": "ui_group",
+        "name": "Dashboard",
+        "tab": "777128d079b66ece",
+        "order": 1,
+        "disp": true,
+        "width": "12",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "9e8dc33f69e95703",
+        "type": "ui_group",
+        "name": "Standard",
+        "tab": "",
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "777128d079b66ece",
+        "type": "ui_tab",
+        "name": "Dashboard",
+        "icon": "dashboard",
         "disabled": false,
         "hidden": false
     },
@@ -322,7 +360,7 @@
         "type": "function",
         "z": "f59ffeb2427b290b",
         "name": "",
-        "func": "const date = new Date();\n\n\nmsg.payload = `${date.getHours()}:${date.getMinutes()} Uhr ${msg.payload}`\nreturn msg;",
+        "func": "const date = new Date();\n\n\nmsg.payload = `${('0' + date.getHours()).slice(-2)}:${('0' + date.getMinutes()).slice(-2)} Uhr ${msg.payload}`\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -352,5 +390,185 @@
         "x": 790,
         "y": 460,
         "wires": []
+    },
+    {
+        "id": "59f972db69a062fa",
+        "type": "mqtt in",
+        "z": "cb66150894bad642",
+        "name": "",
+        "topic": "tele/1/acc",
+        "qos": "0",
+        "datatype": "json",
+        "broker": "f8a1c2ebdf91ab0b",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 160,
+        "y": 380,
+        "wires": [
+            [
+                "819c4a281c2f9b4e"
+            ]
+        ]
+    },
+    {
+        "id": "819c4a281c2f9b4e",
+        "type": "function",
+        "z": "cb66150894bad642",
+        "name": "",
+        "func": "var x = {};\nvar y = {};\nvar z = {};\n\nx.payload = msg.payload.x;\nx.topic = \"x-axis\";\n\ny.payload = msg.payload.y;\ny.topic = \"y-axis\";\n\nz.payload = msg.payload.z;\nz.topic = \"z-axis\";\n\n\nreturn [x, y, z];",
+        "outputs": 3,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 360,
+        "y": 380,
+        "wires": [
+            [
+                "35e8a114ca425d4f"
+            ],
+            [
+                "35e8a114ca425d4f"
+            ],
+            [
+                "35e8a114ca425d4f"
+            ]
+        ]
+    },
+    {
+        "id": "35e8a114ca425d4f",
+        "type": "ui_chart",
+        "z": "cb66150894bad642",
+        "name": "",
+        "group": "755fc76e1639abf3",
+        "order": 2,
+        "width": "12",
+        "height": "5",
+        "label": "Wio1",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "HH:mm:ss",
+        "interpolate": "cubic",
+        "nodata": "",
+        "dot": false,
+        "ymin": "-2",
+        "ymax": "2",
+        "removeOlder": "10",
+        "removeOlderPoints": "1000",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 650,
+        "y": 380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6e48719bb3bb850a",
+        "type": "mqtt in",
+        "z": "cb66150894bad642",
+        "name": "",
+        "topic": "tele/2/acc",
+        "qos": "0",
+        "datatype": "json",
+        "broker": "f8a1c2ebdf91ab0b",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 160,
+        "y": 480,
+        "wires": [
+            [
+                "b8b8bc595930ff71"
+            ]
+        ]
+    },
+    {
+        "id": "b8b8bc595930ff71",
+        "type": "function",
+        "z": "cb66150894bad642",
+        "name": "",
+        "func": "var x = {};\nvar y = {};\nvar z = {};\n\nx.payload = msg.payload.x;\nx.topic = \"x-axis\";\n\ny.payload = msg.payload.y;\ny.topic = \"y-axis\";\n\nz.payload = msg.payload.z;\nz.topic = \"z-axis\";\n\n\nreturn [x, y, z];",
+        "outputs": 3,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 360,
+        "y": 480,
+        "wires": [
+            [
+                "68c37a843456f867"
+            ],
+            [
+                "68c37a843456f867"
+            ],
+            [
+                "68c37a843456f867"
+            ]
+        ]
+    },
+    {
+        "id": "68c37a843456f867",
+        "type": "ui_chart",
+        "z": "cb66150894bad642",
+        "name": "",
+        "group": "755fc76e1639abf3",
+        "order": 2,
+        "width": "12",
+        "height": "5",
+        "label": "Wio2",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "HH:mm:ss",
+        "interpolate": "cubic",
+        "nodata": "",
+        "dot": false,
+        "ymin": "-2",
+        "ymax": "2",
+        "removeOlder": "10",
+        "removeOlderPoints": "1000",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 650,
+        "y": 480,
+        "wires": [
+            []
+        ]
     }
 ]
