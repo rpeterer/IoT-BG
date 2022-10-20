@@ -45,7 +45,7 @@ sudo systemctl stop dnsmasq
 [main]
 dns=dnsmasq
 
-sudo nmcli con add type wifi ifname wlan0 mode ap con-name WIFI_AP ssid IoT-B
+sudo nmcli con add type wifi ifname wlan0 mode ap con-name WIFI_AP ssid IoT-BG
 sudo nmcli con modify WIFI_AP 802-11-wireless.band bg
 sudo nmcli con modify WIFI_AP 802-11-wireless.channel 1
 sudo nmcli con modify WIFI_AP 802-11-wireless-security.key-mgmt wpa-psk
