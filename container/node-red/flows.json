@@ -47,6 +47,7 @@
         "type": "ui_tab",
         "name": "Home",
         "icon": "dashboard",
+        "order": 1,
         "disabled": false,
         "hidden": false
     },
@@ -129,7 +130,7 @@
             }
         },
         "site": {
-            "name": "Node-RED Dashboard",
+            "name": "IoT BG",
             "hideToolbar": "false",
             "allowSwipe": "false",
             "lockMenu": "false",
@@ -204,6 +205,7 @@
         "type": "ui_tab",
         "name": "Dashboard",
         "icon": "dashboard",
+        "order": 2,
         "disabled": false,
         "hidden": false
     },
@@ -217,13 +219,63 @@
         "width": 6
     },
     {
-        "id": "295f4ac7136f3b6d",
+        "id": "a8c6e5d237c414d7",
+        "type": "ui_tab",
+        "name": "Light",
+        "icon": "dashboard",
+        "order": 3,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "ef2008be06ae0720",
+        "type": "ui_group",
+        "name": "Light",
+        "tab": "a8c6e5d237c414d7",
+        "order": 1,
+        "disp": true,
+        "width": 9,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "31462cfa6bd5e9fa",
         "type": "ui_spacer",
-        "z": "f59ffeb2427b290b",
+        "z": "cb66150894bad642",
+        "name": "spacer",
+        "group": "ef2008be06ae0720",
+        "order": 11,
+        "width": 6,
+        "height": 1
+    },
+    {
+        "id": "597d64666d19a95c",
+        "type": "ui_spacer",
+        "z": "cb66150894bad642",
+        "name": "spacer",
+        "group": "ef2008be06ae0720",
+        "order": 12,
+        "width": 6,
+        "height": 1
+    },
+    {
+        "id": "9c2c0408531bae50",
+        "type": "ui_spacer",
+        "z": "cb66150894bad642",
+        "name": "spacer",
+        "group": "ef2008be06ae0720",
+        "order": 13,
+        "width": 6,
+        "height": 1
+    },
+    {
+        "id": "95950c29f9aca38a",
+        "type": "ui_spacer",
+        "z": "cb66150894bad642",
         "name": "spacer",
         "group": "fa7bf54eaa14cc14",
-        "order": 4,
-        "width": 1,
+        "order": 3,
+        "width": 6,
         "height": 1
     },
     {
@@ -253,7 +305,7 @@
         "tooltip": "",
         "place": "Select option",
         "group": "fa7bf54eaa14cc14",
-        "order": 2,
+        "order": 1,
         "width": 0,
         "height": 0,
         "passthru": true,
@@ -317,7 +369,7 @@
         "z": "f59ffeb2427b290b",
         "name": "",
         "group": "fa7bf54eaa14cc14",
-        "order": 7,
+        "order": 6,
         "width": 0,
         "height": 0,
         "passthru": false,
@@ -348,7 +400,7 @@
         "tooltip": "Select the wio id's",
         "place": "Select option",
         "group": "fa7bf54eaa14cc14",
-        "order": 6,
+        "order": 5,
         "width": 0,
         "height": 0,
         "passthru": true,
@@ -491,7 +543,7 @@
         "label": "Message",
         "tooltip": "Max input length is 26 characters",
         "group": "fa7bf54eaa14cc14",
-        "order": 5,
+        "order": 4,
         "width": 0,
         "height": 0,
         "passthru": true,
@@ -663,7 +715,7 @@
         "z": "f59ffeb2427b290b",
         "name": "",
         "group": "fa7bf54eaa14cc14",
-        "order": 3,
+        "order": 2,
         "width": 0,
         "height": 0,
         "passthru": false,
@@ -725,8 +777,8 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 160,
-        "y": 380,
+        "x": 180,
+        "y": 180,
         "wires": [
             [
                 "819c4a281c2f9b4e"
@@ -744,8 +796,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 360,
-        "y": 380,
+        "x": 380,
+        "y": 180,
         "wires": [
             [
                 "35e8a114ca425d4f"
@@ -764,9 +816,9 @@
         "z": "cb66150894bad642",
         "name": "",
         "group": "755fc76e1639abf3",
-        "order": 2,
-        "width": "12",
-        "height": "5",
+        "order": 1,
+        "width": 12,
+        "height": 5,
         "label": "Wio1",
         "chartType": "line",
         "legend": "true",
@@ -796,8 +848,8 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 650,
-        "y": 380,
+        "x": 670,
+        "y": 180,
         "wires": [
             []
         ]
@@ -815,8 +867,8 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 160,
-        "y": 480,
+        "x": 180,
+        "y": 240,
         "wires": [
             [
                 "b8b8bc595930ff71"
@@ -834,8 +886,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 360,
-        "y": 480,
+        "x": 380,
+        "y": 240,
         "wires": [
             [
                 "68c37a843456f867"
@@ -855,8 +907,8 @@
         "name": "",
         "group": "755fc76e1639abf3",
         "order": 2,
-        "width": "12",
-        "height": "5",
+        "width": 12,
+        "height": 5,
         "label": "Wio2",
         "chartType": "line",
         "legend": "true",
@@ -886,10 +938,1210 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 650,
+        "x": 670,
+        "y": 240,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c77b535083c244a1",
+        "type": "mqtt in",
+        "z": "cb66150894bad642",
+        "name": "",
+        "topic": "tele/3/acc",
+        "qos": "0",
+        "datatype": "json",
+        "broker": "f8a1c2ebdf91ab0b",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 180,
+        "y": 300,
+        "wires": [
+            [
+                "f29606f5bd7f95b3"
+            ]
+        ]
+    },
+    {
+        "id": "f29606f5bd7f95b3",
+        "type": "function",
+        "z": "cb66150894bad642",
+        "name": "",
+        "func": "var x = {};\nvar y = {};\nvar z = {};\n\nx.payload = msg.payload.x;\nx.topic = \"x-axis\";\n\ny.payload = msg.payload.y;\ny.topic = \"y-axis\";\n\nz.payload = msg.payload.z;\nz.topic = \"z-axis\";\n\n\nreturn [x, y, z];",
+        "outputs": 3,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 300,
+        "wires": [
+            [
+                "e8e9c4ca15e23e44"
+            ],
+            [
+                "e8e9c4ca15e23e44"
+            ],
+            [
+                "e8e9c4ca15e23e44"
+            ]
+        ]
+    },
+    {
+        "id": "e8e9c4ca15e23e44",
+        "type": "ui_chart",
+        "z": "cb66150894bad642",
+        "name": "",
+        "group": "755fc76e1639abf3",
+        "order": 3,
+        "width": 12,
+        "height": 5,
+        "label": "Wio3",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "HH:mm:ss",
+        "interpolate": "cubic",
+        "nodata": "",
+        "dot": false,
+        "ymin": "-2",
+        "ymax": "2",
+        "removeOlder": "10",
+        "removeOlderPoints": "1000",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 670,
+        "y": 300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c483a70c812de7fd",
+        "type": "ui_gauge",
+        "z": "cb66150894bad642",
+        "name": "",
+        "group": "ef2008be06ae0720",
+        "order": 2,
+        "width": 3,
+        "height": 3,
+        "gtype": "gage",
+        "title": "Light 2",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "1024",
+        "colors": [
+            "#ff0000",
+            "#e6e600",
+            "#00ff38"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 470,
+        "y": 920,
+        "wires": []
+    },
+    {
+        "id": "cf463fdb64e789b1",
+        "type": "mqtt in",
+        "z": "cb66150894bad642",
+        "name": "",
+        "topic": "tele/2/light",
+        "qos": "0",
+        "datatype": "json",
+        "broker": "f8a1c2ebdf91ab0b",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 180,
+        "y": 920,
+        "wires": [
+            [
+                "c483a70c812de7fd"
+            ]
+        ]
+    },
+    {
+        "id": "b08c3ce2d4279f7b",
+        "type": "mqtt in",
+        "z": "cb66150894bad642",
+        "name": "",
+        "topic": "tele/4/acc",
+        "qos": "0",
+        "datatype": "json",
+        "broker": "f8a1c2ebdf91ab0b",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 180,
+        "y": 360,
+        "wires": [
+            [
+                "b5789be70e7e06a9"
+            ]
+        ]
+    },
+    {
+        "id": "b5789be70e7e06a9",
+        "type": "function",
+        "z": "cb66150894bad642",
+        "name": "",
+        "func": "var x = {};\nvar y = {};\nvar z = {};\n\nx.payload = msg.payload.x;\nx.topic = \"x-axis\";\n\ny.payload = msg.payload.y;\ny.topic = \"y-axis\";\n\nz.payload = msg.payload.z;\nz.topic = \"z-axis\";\n\n\nreturn [x, y, z];",
+        "outputs": 3,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 360,
+        "wires": [
+            [
+                "a231cabc5153a2e9"
+            ],
+            [
+                "a231cabc5153a2e9"
+            ],
+            [
+                "a231cabc5153a2e9"
+            ]
+        ]
+    },
+    {
+        "id": "a231cabc5153a2e9",
+        "type": "ui_chart",
+        "z": "cb66150894bad642",
+        "name": "",
+        "group": "755fc76e1639abf3",
+        "order": 4,
+        "width": 12,
+        "height": 5,
+        "label": "Wio4",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "HH:mm:ss",
+        "interpolate": "cubic",
+        "nodata": "",
+        "dot": false,
+        "ymin": "-2",
+        "ymax": "2",
+        "removeOlder": "10",
+        "removeOlderPoints": "1000",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 670,
+        "y": 360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9442c11ce2a93da3",
+        "type": "mqtt in",
+        "z": "cb66150894bad642",
+        "name": "",
+        "topic": "tele/5/acc",
+        "qos": "0",
+        "datatype": "json",
+        "broker": "f8a1c2ebdf91ab0b",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 180,
+        "y": 420,
+        "wires": [
+            [
+                "8da3caee9ca7481a"
+            ]
+        ]
+    },
+    {
+        "id": "8da3caee9ca7481a",
+        "type": "function",
+        "z": "cb66150894bad642",
+        "name": "",
+        "func": "var x = {};\nvar y = {};\nvar z = {};\n\nx.payload = msg.payload.x;\nx.topic = \"x-axis\";\n\ny.payload = msg.payload.y;\ny.topic = \"y-axis\";\n\nz.payload = msg.payload.z;\nz.topic = \"z-axis\";\n\n\nreturn [x, y, z];",
+        "outputs": 3,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 420,
+        "wires": [
+            [
+                "bbaf8b2039f382bc"
+            ],
+            [
+                "bbaf8b2039f382bc"
+            ],
+            [
+                "bbaf8b2039f382bc"
+            ]
+        ]
+    },
+    {
+        "id": "bbaf8b2039f382bc",
+        "type": "ui_chart",
+        "z": "cb66150894bad642",
+        "name": "",
+        "group": "755fc76e1639abf3",
+        "order": 5,
+        "width": 12,
+        "height": 5,
+        "label": "Wio5",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "HH:mm:ss",
+        "interpolate": "cubic",
+        "nodata": "",
+        "dot": false,
+        "ymin": "-2",
+        "ymax": "2",
+        "removeOlder": "10",
+        "removeOlderPoints": "1000",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 670,
+        "y": 420,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f0e93d8d90b5a5f8",
+        "type": "mqtt in",
+        "z": "cb66150894bad642",
+        "name": "",
+        "topic": "tele/6/acc",
+        "qos": "0",
+        "datatype": "json",
+        "broker": "f8a1c2ebdf91ab0b",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 180,
+        "y": 480,
+        "wires": [
+            [
+                "fbb8f85fc8a84a77"
+            ]
+        ]
+    },
+    {
+        "id": "fbb8f85fc8a84a77",
+        "type": "function",
+        "z": "cb66150894bad642",
+        "name": "",
+        "func": "var x = {};\nvar y = {};\nvar z = {};\n\nx.payload = msg.payload.x;\nx.topic = \"x-axis\";\n\ny.payload = msg.payload.y;\ny.topic = \"y-axis\";\n\nz.payload = msg.payload.z;\nz.topic = \"z-axis\";\n\n\nreturn [x, y, z];",
+        "outputs": 3,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 480,
+        "wires": [
+            [
+                "1b7dc64f1c3b9eeb"
+            ],
+            [
+                "1b7dc64f1c3b9eeb"
+            ],
+            [
+                "1b7dc64f1c3b9eeb"
+            ]
+        ]
+    },
+    {
+        "id": "1b7dc64f1c3b9eeb",
+        "type": "ui_chart",
+        "z": "cb66150894bad642",
+        "name": "",
+        "group": "755fc76e1639abf3",
+        "order": 6,
+        "width": 12,
+        "height": 5,
+        "label": "Wio6",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "HH:mm:ss",
+        "interpolate": "cubic",
+        "nodata": "",
+        "dot": false,
+        "ymin": "-2",
+        "ymax": "2",
+        "removeOlder": "10",
+        "removeOlderPoints": "1000",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 670,
         "y": 480,
         "wires": [
             []
+        ]
+    },
+    {
+        "id": "1a8d212eb9a97d08",
+        "type": "mqtt in",
+        "z": "cb66150894bad642",
+        "name": "",
+        "topic": "tele/7/acc",
+        "qos": "0",
+        "datatype": "json",
+        "broker": "f8a1c2ebdf91ab0b",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 180,
+        "y": 540,
+        "wires": [
+            [
+                "5b83a86eba522a81"
+            ]
+        ]
+    },
+    {
+        "id": "5b83a86eba522a81",
+        "type": "function",
+        "z": "cb66150894bad642",
+        "name": "",
+        "func": "var x = {};\nvar y = {};\nvar z = {};\n\nx.payload = msg.payload.x;\nx.topic = \"x-axis\";\n\ny.payload = msg.payload.y;\ny.topic = \"y-axis\";\n\nz.payload = msg.payload.z;\nz.topic = \"z-axis\";\n\n\nreturn [x, y, z];",
+        "outputs": 3,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 540,
+        "wires": [
+            [
+                "89a20ad3baa932ba"
+            ],
+            [
+                "89a20ad3baa932ba"
+            ],
+            [
+                "89a20ad3baa932ba"
+            ]
+        ]
+    },
+    {
+        "id": "89a20ad3baa932ba",
+        "type": "ui_chart",
+        "z": "cb66150894bad642",
+        "name": "",
+        "group": "755fc76e1639abf3",
+        "order": 7,
+        "width": 12,
+        "height": 5,
+        "label": "Wio7",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "HH:mm:ss",
+        "interpolate": "cubic",
+        "nodata": "",
+        "dot": false,
+        "ymin": "-2",
+        "ymax": "2",
+        "removeOlder": "10",
+        "removeOlderPoints": "1000",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 670,
+        "y": 540,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1e443321bc7b5cbe",
+        "type": "mqtt in",
+        "z": "cb66150894bad642",
+        "name": "",
+        "topic": "tele/8/acc",
+        "qos": "0",
+        "datatype": "json",
+        "broker": "f8a1c2ebdf91ab0b",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 180,
+        "y": 600,
+        "wires": [
+            [
+                "9277ed3ca4907a5b"
+            ]
+        ]
+    },
+    {
+        "id": "9277ed3ca4907a5b",
+        "type": "function",
+        "z": "cb66150894bad642",
+        "name": "",
+        "func": "var x = {};\nvar y = {};\nvar z = {};\n\nx.payload = msg.payload.x;\nx.topic = \"x-axis\";\n\ny.payload = msg.payload.y;\ny.topic = \"y-axis\";\n\nz.payload = msg.payload.z;\nz.topic = \"z-axis\";\n\n\nreturn [x, y, z];",
+        "outputs": 3,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 600,
+        "wires": [
+            [
+                "9e7fbffe3cc38d4f"
+            ],
+            [
+                "9e7fbffe3cc38d4f"
+            ],
+            [
+                "9e7fbffe3cc38d4f"
+            ]
+        ]
+    },
+    {
+        "id": "9e7fbffe3cc38d4f",
+        "type": "ui_chart",
+        "z": "cb66150894bad642",
+        "name": "",
+        "group": "755fc76e1639abf3",
+        "order": 8,
+        "width": 12,
+        "height": 5,
+        "label": "Wio8",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "HH:mm:ss",
+        "interpolate": "cubic",
+        "nodata": "",
+        "dot": false,
+        "ymin": "-2",
+        "ymax": "2",
+        "removeOlder": "10",
+        "removeOlderPoints": "1000",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 670,
+        "y": 600,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ec7febe9d28f0ce4",
+        "type": "mqtt in",
+        "z": "cb66150894bad642",
+        "name": "",
+        "topic": "tele/9/acc",
+        "qos": "0",
+        "datatype": "json",
+        "broker": "f8a1c2ebdf91ab0b",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 180,
+        "y": 660,
+        "wires": [
+            [
+                "d1ad7193b913be5f"
+            ]
+        ]
+    },
+    {
+        "id": "d1ad7193b913be5f",
+        "type": "function",
+        "z": "cb66150894bad642",
+        "name": "",
+        "func": "var x = {};\nvar y = {};\nvar z = {};\n\nx.payload = msg.payload.x;\nx.topic = \"x-axis\";\n\ny.payload = msg.payload.y;\ny.topic = \"y-axis\";\n\nz.payload = msg.payload.z;\nz.topic = \"z-axis\";\n\n\nreturn [x, y, z];",
+        "outputs": 3,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 660,
+        "wires": [
+            [
+                "e407845b6ed8fc93"
+            ],
+            [
+                "e407845b6ed8fc93"
+            ],
+            [
+                "e407845b6ed8fc93"
+            ]
+        ]
+    },
+    {
+        "id": "e407845b6ed8fc93",
+        "type": "ui_chart",
+        "z": "cb66150894bad642",
+        "name": "",
+        "group": "755fc76e1639abf3",
+        "order": 9,
+        "width": 12,
+        "height": 5,
+        "label": "Wio9",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "HH:mm:ss",
+        "interpolate": "cubic",
+        "nodata": "",
+        "dot": false,
+        "ymin": "-2",
+        "ymax": "2",
+        "removeOlder": "10",
+        "removeOlderPoints": "1000",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 670,
+        "y": 660,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1407d99f51e6e727",
+        "type": "mqtt in",
+        "z": "cb66150894bad642",
+        "name": "",
+        "topic": "tele/10/acc",
+        "qos": "0",
+        "datatype": "json",
+        "broker": "f8a1c2ebdf91ab0b",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 180,
+        "y": 720,
+        "wires": [
+            [
+                "0c08e5a144302fc8"
+            ]
+        ]
+    },
+    {
+        "id": "0c08e5a144302fc8",
+        "type": "function",
+        "z": "cb66150894bad642",
+        "name": "",
+        "func": "var x = {};\nvar y = {};\nvar z = {};\n\nx.payload = msg.payload.x;\nx.topic = \"x-axis\";\n\ny.payload = msg.payload.y;\ny.topic = \"y-axis\";\n\nz.payload = msg.payload.z;\nz.topic = \"z-axis\";\n\n\nreturn [x, y, z];",
+        "outputs": 3,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 720,
+        "wires": [
+            [
+                "4048bd6fcb0f3b86"
+            ],
+            [
+                "4048bd6fcb0f3b86"
+            ],
+            [
+                "4048bd6fcb0f3b86"
+            ]
+        ]
+    },
+    {
+        "id": "4048bd6fcb0f3b86",
+        "type": "ui_chart",
+        "z": "cb66150894bad642",
+        "name": "",
+        "group": "755fc76e1639abf3",
+        "order": 10,
+        "width": 12,
+        "height": 5,
+        "label": "Wio10",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "HH:mm:ss",
+        "interpolate": "cubic",
+        "nodata": "",
+        "dot": false,
+        "ymin": "-2",
+        "ymax": "2",
+        "removeOlder": "10",
+        "removeOlderPoints": "1000",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 670,
+        "y": 720,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "25d30930563fcee3",
+        "type": "ui_gauge",
+        "z": "cb66150894bad642",
+        "name": "",
+        "group": "ef2008be06ae0720",
+        "order": 1,
+        "width": 3,
+        "height": 3,
+        "gtype": "gage",
+        "title": "Light 1",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "1024",
+        "colors": [
+            "#ff0000",
+            "#e6e600",
+            "#00ff38"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 470,
+        "y": 880,
+        "wires": []
+    },
+    {
+        "id": "3bc90dc8f061e21a",
+        "type": "mqtt in",
+        "z": "cb66150894bad642",
+        "name": "",
+        "topic": "tele/1/light",
+        "qos": "0",
+        "datatype": "json",
+        "broker": "f8a1c2ebdf91ab0b",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 180,
+        "y": 880,
+        "wires": [
+            [
+                "25d30930563fcee3"
+            ]
+        ]
+    },
+    {
+        "id": "f11688df07460223",
+        "type": "ui_gauge",
+        "z": "cb66150894bad642",
+        "name": "",
+        "group": "ef2008be06ae0720",
+        "order": 3,
+        "width": 3,
+        "height": 3,
+        "gtype": "gage",
+        "title": "Light 3",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "1024",
+        "colors": [
+            "#ff0000",
+            "#e6e600",
+            "#00ff38"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 470,
+        "y": 960,
+        "wires": []
+    },
+    {
+        "id": "742dcfdd29cf5cc4",
+        "type": "mqtt in",
+        "z": "cb66150894bad642",
+        "name": "",
+        "topic": "tele/3/light",
+        "qos": "0",
+        "datatype": "json",
+        "broker": "f8a1c2ebdf91ab0b",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 180,
+        "y": 960,
+        "wires": [
+            [
+                "f11688df07460223"
+            ]
+        ]
+    },
+    {
+        "id": "c3b73e8fd3f2bdf2",
+        "type": "ui_gauge",
+        "z": "cb66150894bad642",
+        "name": "",
+        "group": "ef2008be06ae0720",
+        "order": 4,
+        "width": 3,
+        "height": 3,
+        "gtype": "gage",
+        "title": "Light 4",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "1024",
+        "colors": [
+            "#ff0000",
+            "#e6e600",
+            "#00ff38"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 470,
+        "y": 1000,
+        "wires": []
+    },
+    {
+        "id": "e18c21c12f206148",
+        "type": "mqtt in",
+        "z": "cb66150894bad642",
+        "name": "",
+        "topic": "tele/4/light",
+        "qos": "0",
+        "datatype": "json",
+        "broker": "f8a1c2ebdf91ab0b",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 180,
+        "y": 1000,
+        "wires": [
+            [
+                "c3b73e8fd3f2bdf2"
+            ]
+        ]
+    },
+    {
+        "id": "88ad64943691520e",
+        "type": "ui_gauge",
+        "z": "cb66150894bad642",
+        "name": "",
+        "group": "ef2008be06ae0720",
+        "order": 5,
+        "width": 3,
+        "height": 3,
+        "gtype": "gage",
+        "title": "Light 5",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "1024",
+        "colors": [
+            "#ff0000",
+            "#e6e600",
+            "#00ff38"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 470,
+        "y": 1040,
+        "wires": []
+    },
+    {
+        "id": "9f5c8e5e77e8658f",
+        "type": "mqtt in",
+        "z": "cb66150894bad642",
+        "name": "",
+        "topic": "tele/5/light",
+        "qos": "0",
+        "datatype": "json",
+        "broker": "f8a1c2ebdf91ab0b",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 180,
+        "y": 1040,
+        "wires": [
+            [
+                "88ad64943691520e"
+            ]
+        ]
+    },
+    {
+        "id": "967f55266c04b7f2",
+        "type": "ui_gauge",
+        "z": "cb66150894bad642",
+        "name": "",
+        "group": "ef2008be06ae0720",
+        "order": 6,
+        "width": 3,
+        "height": 3,
+        "gtype": "gage",
+        "title": "Light 6",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "1024",
+        "colors": [
+            "#ff0000",
+            "#e6e600",
+            "#00ff38"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 470,
+        "y": 1080,
+        "wires": []
+    },
+    {
+        "id": "03beb6806a3838af",
+        "type": "mqtt in",
+        "z": "cb66150894bad642",
+        "name": "",
+        "topic": "tele/6/light",
+        "qos": "0",
+        "datatype": "json",
+        "broker": "f8a1c2ebdf91ab0b",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 180,
+        "y": 1080,
+        "wires": [
+            [
+                "967f55266c04b7f2"
+            ]
+        ]
+    },
+    {
+        "id": "bb0e42565eb81ba5",
+        "type": "ui_gauge",
+        "z": "cb66150894bad642",
+        "name": "",
+        "group": "ef2008be06ae0720",
+        "order": 7,
+        "width": 3,
+        "height": 3,
+        "gtype": "gage",
+        "title": "Light 7",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "1024",
+        "colors": [
+            "#ff0000",
+            "#e6e600",
+            "#00ff38"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 470,
+        "y": 1120,
+        "wires": []
+    },
+    {
+        "id": "27d7d5b4b1897a85",
+        "type": "mqtt in",
+        "z": "cb66150894bad642",
+        "name": "",
+        "topic": "tele/7/light",
+        "qos": "0",
+        "datatype": "json",
+        "broker": "f8a1c2ebdf91ab0b",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 180,
+        "y": 1120,
+        "wires": [
+            [
+                "bb0e42565eb81ba5"
+            ]
+        ]
+    },
+    {
+        "id": "0847fb23e037b705",
+        "type": "ui_gauge",
+        "z": "cb66150894bad642",
+        "name": "",
+        "group": "ef2008be06ae0720",
+        "order": 8,
+        "width": 3,
+        "height": 3,
+        "gtype": "gage",
+        "title": "Light 8",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "1024",
+        "colors": [
+            "#ff0000",
+            "#e6e600",
+            "#00ff38"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 470,
+        "y": 1160,
+        "wires": []
+    },
+    {
+        "id": "c31fcfb352baef22",
+        "type": "mqtt in",
+        "z": "cb66150894bad642",
+        "name": "",
+        "topic": "tele/8/light",
+        "qos": "0",
+        "datatype": "json",
+        "broker": "f8a1c2ebdf91ab0b",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 180,
+        "y": 1160,
+        "wires": [
+            [
+                "0847fb23e037b705"
+            ]
+        ]
+    },
+    {
+        "id": "6c014169f4f5656e",
+        "type": "ui_gauge",
+        "z": "cb66150894bad642",
+        "name": "",
+        "group": "ef2008be06ae0720",
+        "order": 9,
+        "width": 3,
+        "height": 3,
+        "gtype": "gage",
+        "title": "Light 9",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "1024",
+        "colors": [
+            "#ff0000",
+            "#e6e600",
+            "#00ff38"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 470,
+        "y": 1200,
+        "wires": []
+    },
+    {
+        "id": "59227b2dc3069307",
+        "type": "mqtt in",
+        "z": "cb66150894bad642",
+        "name": "",
+        "topic": "tele/9/light",
+        "qos": "0",
+        "datatype": "json",
+        "broker": "f8a1c2ebdf91ab0b",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 180,
+        "y": 1200,
+        "wires": [
+            [
+                "6c014169f4f5656e"
+            ]
+        ]
+    },
+    {
+        "id": "bb56188862699b17",
+        "type": "ui_gauge",
+        "z": "cb66150894bad642",
+        "name": "",
+        "group": "ef2008be06ae0720",
+        "order": 10,
+        "width": 3,
+        "height": 3,
+        "gtype": "gage",
+        "title": "Light 10",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "1024",
+        "colors": [
+            "#ff0000",
+            "#e6e600",
+            "#00ff38"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 480,
+        "y": 1240,
+        "wires": []
+    },
+    {
+        "id": "606d4e0e9e1a1c99",
+        "type": "mqtt in",
+        "z": "cb66150894bad642",
+        "name": "",
+        "topic": "tele/10/light",
+        "qos": "0",
+        "datatype": "json",
+        "broker": "f8a1c2ebdf91ab0b",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 190,
+        "y": 1240,
+        "wires": [
+            [
+                "bb56188862699b17"
+            ]
         ]
     }
 ]
